@@ -1,1 +1,65 @@
-<h1>Hello!</h1>
+<html>
+  <head>
+    <title>Danica Meier</title>
+		
+    <style>
+			:root {
+				--page-color: lightgray;
+			}
+			.page-center {
+        background-color: var(--page-color);
+        width: 75%;
+        min-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+      }
+      #header {
+     		position: fixed;
+				height: 300px;
+				margin-top: 0px;
+				margin-bottom: 100px;
+				box-shadow: 0px 5px 30px var(--page-color);
+      }
+			ul.header-buttons li {
+				list-style-type: none;
+				margin-top: auto;
+				margin-bottom: auto;
+				display: inline;
+			}
+			ul.header-buttons {
+				width: 20%;
+				padding: 0;
+				margin: 0;
+			}
+			#ul-left {
+				float: left;
+			}
+			#ul-right {
+				float: right;
+			}
+		</style>
+			
+  </head>
+  
+  <body>
+        
+    <div id="page" class="page-center">
+			
+      <div id="header" class="page-center">
+				<p id="name" href="/home">Danica Meier</p>
+				<!-- <p id="description">description here</p> -->
+			
+				<ul id="ul-left" class="header-buttons">
+					<li>home</li>
+					<li>projects</li>
+				</ul>
+				
+				<ul id="ul-right" class="header-buttons">
+					<li>about</li>
+					<li>contact</li>
+				</ul>
+			
+			</div>
+			
+    </div>
