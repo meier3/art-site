@@ -8,14 +8,15 @@ body {
 }
 
 * {
-	font-family: sans-serif;
+	font-family: 'Questrial', sans-serif;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
 }
 
 #content {
 	margin-top: 140px;
 	margin-bottom: 100px;
-	height: 1000px;
-	background-color: var(--content-color);
+	.background-color: var(--content-color);
 }
 
 .page {
@@ -53,10 +54,10 @@ body {
 #name {
 	text-align: center;
 	font-size: 25px;
-	margin-top: 20px;
+	margin-top: 23px;
 	letter-spacing: 0px;
 	color: lightgray;
-	.font-family: 'Questrial', sans-serif;
+	font-family: 'Questrial', sans-serif;
 	.font-family: 'Neucha', cursive;
 	.font-family: 'Shadows Into Light Two', cursive;
 	..font-family: 'Amatic SC', cursive;
@@ -81,7 +82,11 @@ img.h-button {
 }
 
 img.h-button:hover {
-	box-shadow: 0px 0px 5px 5px lightgray;
+	box-shadow: 0px 0px 5px 3px lightgray;
+	-webkit-transition-property: box-shadow; /* Safari */
+   transition-property: box-shadow;
+	-webkit-transition-duration: .25s;
+	transition-duration: .25s;
 }
 
 #ul-left {
@@ -93,6 +98,64 @@ img.h-button:hover {
 	float: right;
 	width: 30%;
 }
+
+#box-link-wrapper {
+	width:
+	margin: auto;
+}
+
+.box-link {
+	height: 155px;
+	border: solid 1px lightgray;
+	border-radius: 5px;
+	display: grid;
+	margin-top: 15px;
+	overflow: hidden;
+	box-shadow: 0px 0px 20px 5px dimgray;
+}
+
+.box-link img {
+	height: 500%;
+	width: auto;
+	overflow: hidden;
+}
+
+.box-link:hover img {
+	filter: blur(5px);
+	-webkit-transition-property: filter; /* Safari */
+	transition-property: filter;
+}
+
+.box-link h3 {
+	color: white;
+	font-size: 50px;
+	z-index: 900;
+	opacity: .6;
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 10px;
+}
+
+.box-link:hover h3 {
+	opacity: 1;
+	margin-top: 60px;
+	-webkit-transition-property: opacity margin-top; /* Safari */
+	transition-property: opacity margin-top;
+}
+
+.box-link h4 {
+	opacity: 0;
+	width: auto;
+	position: absolute;
+	margin-top: 125px;
+	margin-left: 10px;
+}
+
+.box-link:hover h4 {
+	opacity: 1;
+	-webkit-transition-property: opacity; /* Safari */
+	transition-property: opacity;
+	transition-delay: .1s;
 
 #footer {
 	position: absolute;
