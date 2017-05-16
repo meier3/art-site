@@ -1,6 +1,6 @@
 :root {
-	--page-color: gray;
-	--content-color: lightgray;
+	--page-color: #cccccc;
+	--accent-color: #eeeeee;
 }
 
 body {
@@ -9,14 +9,17 @@ body {
 
 * {
 	font-family: 'Questrial', sans-serif;
-	transition-duration: .5s;
+	transition-duration: .45s;
 	transition-timing-function: ease-in-out;
+}
+
+* a {
+	cursor: crosshair;
 }
 
 #content {
 	margin-top: 140px;
 	margin-bottom: 100px;
-	.background-color: var(--content-color);
 }
 
 .page {
@@ -55,13 +58,10 @@ body {
 	text-align: center;
 	font-size: 25px;
 	margin-top: 23px;
-	letter-spacing: 0px;
-	color: lightgray;
+	letter-spacing: 2px;
+	color: var(--accent-color);
 	font-family: 'Questrial', sans-serif;
-	.font-family: 'Neucha', cursive;
-	.font-family: 'Shadows Into Light Two', cursive;
-	..font-family: 'Amatic SC', cursive;
-	.font-family: 'Inknut Antiqua', serif;
+	cursor: default;
 }
 
 ul.header-buttons {
@@ -79,14 +79,16 @@ ul.header-buttons li {
 
 img.h-button {
 	border-radius: 100px;
+	background-color: transparent;
 }
 
 img.h-button:hover {
-	box-shadow: 0px 0px 5px 3px lightgray;
-	-webkit-transition-property: box-shadow; /* Safari */
-   transition-property: box-shadow;
+	box-shadow: 0px 0px 6px 4px var(--accent-color);
+	-webkit-transition-property: box-shadow background-color; /* Safari */
+   transition-property: box-shadow background-color;
 	-webkit-transition-duration: .25s;
 	transition-duration: .25s;
+	background-color: var(--accent-color);
 }
 
 #ul-left {
@@ -99,6 +101,19 @@ img.h-button:hover {
 	width: 30%;
 }
 
+#header-tag {
+	margin-top: 60px;
+}
+
+#header-tag p {
+	display: inline;
+	opacity: 0;
+}
+
+img.h-button:hover p {
+	opacity: .8;
+}
+
 #box-link-wrapper {
 	width:
 	margin: auto;
@@ -106,18 +121,17 @@ img.h-button:hover {
 
 .box-link {
 	height: 155px;
-	border: solid 1px lightgray;
+	border: solid 1px var(--accent-color);
 	border-radius: 5px;
 	display: grid;
-	margin-top: 15px;
+	margin-top: 30px;
 	overflow: hidden;
 	box-shadow: 0px 0px 20px 5px dimgray;
+	cursor: default;
 }
 
 .box-link img {
-	height: 500%;
-	width: auto;
-	overflow: hidden;
+	width: 100%;
 }
 
 .box-link:hover img {
