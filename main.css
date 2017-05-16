@@ -3,6 +3,14 @@
 	--accent-color: #eeeeee;
 }
 
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Questrial'), local('Questrial-Regular'), url(https://fonts.gstatic.com/s/questrial/v6/MYWJ4lYm5dbZ1UBuYox79FtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 body {
 	background-color: var(--page-color);
 }
@@ -11,10 +19,6 @@ body {
 	font-family: 'Questrial', sans-serif;
 	transition-duration: .45s;
 	transition-timing-function: ease-in-out;
-}
-
-* a {
-	cursor: crosshair;
 }
 
 #content {
@@ -32,9 +36,7 @@ body {
 	margin-right: auto;
 }
 
-#header, .h-content {
-	background-color: var(--page-color)
-}
+/*   header   */
 
 #header {
 	position: fixed;
@@ -42,6 +44,10 @@ body {
 	height: 75px;
 	box-shadow: 0px -30px 40px 60px var(--page-color);
 	z-index: 999;
+}
+
+#header, .h-content {
+	background-color: var(--page-color)
 }
 
 .h-content {
@@ -57,9 +63,9 @@ body {
 #name {
 	text-align: center;
 	font-size: 25px;
-	margin-top: 23px;
+	margin: 23px 0px;
 	letter-spacing: 2px;
-	color: var(--accent-color);
+	color: black;
 	font-family: 'Questrial', sans-serif;
 	cursor: default;
 }
@@ -77,20 +83,6 @@ ul.header-buttons li {
 	margin: 20px;
 }
 
-img.h-button {
-	border-radius: 100px;
-	background-color: transparent;
-}
-
-img.h-button:hover {
-	box-shadow: 0px 0px 6px 4px var(--accent-color);
-	-webkit-transition-property: box-shadow background-color; /* Safari */
-   transition-property: box-shadow background-color;
-	-webkit-transition-duration: .25s;
-	transition-duration: .25s;
-	background-color: var(--accent-color);
-}
-
 #ul-left {
 	float: left;
 	width: 30%;
@@ -101,18 +93,20 @@ img.h-button:hover {
 	width: 30%;
 }
 
-#header-tag {
-	margin-top: 60px;
+img.h-button {
+	border-radius: 100px;
+	opacity: .65;
 }
 
-#header-tag p {
-	display: inline;
-	opacity: 0;
+img.h-button:hover {
+	box-shadow: 0px 0px 6px 4px var(--accent-color);
+	-webkit-transition-property: opacity box-shadow background-color; /* Safari */
+   transition-property: opacity box-shadow background-color;
+	background-color: var(--accent-color);
+	opacity: 1;
 }
 
-img.h-button:hover p {
-	opacity: .8;
-}
+/*   box layout   */
 
 #box-link-wrapper {
 	width:
@@ -120,31 +114,41 @@ img.h-button:hover p {
 }
 
 .box-link {
+	b.ox-shadow: 0px 0px 5px 1px dimgray;
 	height: 155px;
 	border: solid 1px var(--accent-color);
 	border-radius: 5px;
 	display: grid;
-	margin-top: 30px;
+	margin-top: 40px;
 	overflow: hidden;
-	box-shadow: 0px 0px 20px 5px dimgray;
 	cursor: default;
+	clear: both;
+}
+
+.box-link-half {
+	width: 47%;
+	clear: none;
 }
 
 .box-link img {
 	width: 100%;
+	border-radius: 5px;
+}
+
+.box-link:hover {
+	box-shadow: 0px 0px 15px 1px dimgray;
+	opacity: .75;
 }
 
 .box-link:hover img {
 	filter: blur(5px);
-	-webkit-transition-property: filter; /* Safari */
-	transition-property: filter;
 }
 
 .box-link h3 {
 	color: white;
 	font-size: 50px;
 	z-index: 900;
-	opacity: .6;
+	opacity: .5;
 	position: absolute;
 	margin-top: 100px;
 	margin-left: 10px;
@@ -153,8 +157,6 @@ img.h-button:hover p {
 .box-link:hover h3 {
 	opacity: 1;
 	margin-top: 60px;
-	-webkit-transition-property: opacity margin-top; /* Safari */
-	transition-property: opacity margin-top;
 }
 
 .box-link h4 {
@@ -163,17 +165,10 @@ img.h-button:hover p {
 	position: absolute;
 	margin-top: 125px;
 	margin-left: 10px;
+	color: lightgray;
 }
 
 .box-link:hover h4 {
 	opacity: 1;
-	-webkit-transition-property: opacity; /* Safari */
-	transition-property: opacity;
-	transition-delay: .1s;
-
-#footer {
-	position: absolute;
-	clear: all;
-	bottom: 0;
-	height: 10px;
+	transition-delay: .1s;	
 }

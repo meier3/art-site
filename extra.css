@@ -1,0 +1,15 @@
+/* for button labels in header */
+
+#header-tag {
+	margin-top: 60px;
+}
+
+#header-tag p {
+	display: inline;
+	opacity: 0;
+}
+
+img.h-button:hover p {
+	opacity: .8;
+}
+
