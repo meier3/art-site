@@ -30,7 +30,7 @@ body {
 
 #content {
 	margin-top: 140px;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 
 .page {
@@ -122,7 +122,6 @@ img.h-button:hover {
 }
 
 .box-link {
-	b.ox-shadow: 0px 0px 5px 1px dimgray;
 	height: 155px;
 	border: solid 1px var(--accent-color);
 	border-radius: 5px;
@@ -227,7 +226,6 @@ h1 {
 	margin-bottom: 50px;
 	box-shadow: 0px 0px 5px 1px gray;
 }
-
 
 #convo img {
 	display: inline;
